@@ -1,4 +1,4 @@
-# VecKtor Engine 
+# VeKctor Engine 
 
 A Search Engine for **ArXiv** Research papers, using both **Spare Retrieval**, advance **Dense embeddings** and **Hybrid retreival pipeline**, Focused on ML and DS side 
 
@@ -15,7 +15,7 @@ A Search Engine for **ArXiv** Research papers, using both **Spare Retrieval**, a
 
 ## 📂 Project Structure (intial) 
 
-vecKtor-engine/
+vekctor-engine/
 ├── data/ 
 ├── src/
 ├── notebooks/
