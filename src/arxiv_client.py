@@ -6,7 +6,7 @@ from pathlib import Path
 
 class ArxivClient:
     def __init__(self, max_results=100):
-        self.client = arxiv.Client()
+        self.client = arxiv.Client(page_size=20, delay_seconds=3, num_retries=3)
         self.max_results = max_results
 
     def search(self, query="all", categories=None):
@@ -54,11 +54,3 @@ class ArxivClient:
                 raise FileNotFoundError(f"File with path {filepath} does not exist")
             except json.JSONDecodeError as e:
                 raise ValueError(f"Invalid JSON: from {e}")
-
-
-arv = ArxivClient(max_results=2)
-
-papers = arv.search()
-
-filepath = arv.save_papers(papers)
-data = arv.load_json(filepath)
